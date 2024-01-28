@@ -1,4 +1,6 @@
 def eratosthenes(n):
+    if n<0: 
+        return []
     primes = [True] * (n+1)
     primes[0] = primes[1] = False  # 0 và 1 không phải là số nguyên tố
 
@@ -11,4 +13,4 @@ def eratosthenes(n):
 
     return [i for i in range(n+1) if primes[i]]
 
-print(eratosthenes(100))
+print(eratosthenes(-50))
