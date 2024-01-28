@@ -13,4 +13,3 @@ def eratosthenes(n):
 
     return [i for i in range(n+1) if primes[i]]
 
-print(eratosthenes(-50))
