@@ -1,7 +1,8 @@
 import random
 
 def miller_rabin(n,t=10):
-
+    if t <= 0:
+        t = 10
     if n <= 1:
         return False
     if n == 2 or n == 3:

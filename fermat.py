@@ -1,6 +1,8 @@
 import random
 # Sử dụng hàm để kiểm tra xem số n có phải là số nguyên tố hay không
 def fermat_test(n, k=10):
+    if k <= 0:
+        k = 10
     if n <= 1:
         return False
     if n == 2 or n == 3:
