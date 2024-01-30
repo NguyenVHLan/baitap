@@ -16,7 +16,7 @@ def fermat_test(n, k):
         return True
     
     for _ in range(k):
-        a = random.randint(2, n-1)
+        a = random.randint(2,n-1)
         if not fermat_check(a, n):
             return False
     return True

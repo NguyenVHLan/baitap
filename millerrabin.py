@@ -23,7 +23,7 @@ def miller_rabin(n,t):
         if (y != 1) and (y != n-1) :
             j=1
             while (j<=s-1) and (y!=n-1):
-                y=modulo_power(y,y,n)
+                y=modulo_power(y,2,n)
                 if y==1:
                     return False
                 j += 1

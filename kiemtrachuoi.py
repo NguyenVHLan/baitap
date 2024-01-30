@@ -42,6 +42,7 @@ def kmp(P,T):
                 j = 0
             else:
                 j = failure(j,P)
+    return -1
 
 def failure(k,P):
     if k <= 0:
