@@ -1,6 +1,6 @@
 import random
 # Sử dụng hàm để kiểm tra xem số n có phải là số nguyên tố hay không
-def fermat_test(n, k=10):
+def fermat_test(n, k):
     if k <= 0:
         k = 10
     if n <= 1:
@@ -22,6 +22,8 @@ def fermat_test(n, k=10):
     return True
 
 def modulo_power(a, b, m):
+    if a % m == 0:
+        return 0 
     result = 1
     a = a % m 
     while b > 0:
@@ -31,4 +33,4 @@ def modulo_power(a, b, m):
         a = (a * a) % m
     return result
 
-print(fermat_test(5))
+

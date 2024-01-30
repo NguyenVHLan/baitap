@@ -1,6 +1,6 @@
 import random
 
-def miller_rabin(n,t=10):
+def miller_rabin(n,t):
     if t <= 0:
         t = 10
     if n <= 1:
@@ -33,6 +33,8 @@ def miller_rabin(n,t=10):
     return True
 
 def modulo_power(a, b, m):
+    if a % m == 0:
+        return 0 
     result = 1
     a = a % m 
     while b > 0:
