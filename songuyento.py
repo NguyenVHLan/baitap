@@ -12,4 +12,3 @@ def eratosthenes(n):
         p += 1
 
     return [i for i in range(n+1) if primes[i]]
-

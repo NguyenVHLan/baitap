@@ -30,3 +30,5 @@ def modulo_power(a, b, m):
         b = b // 2
         a = (a * a) % m
     return result
+
+print(fermat_test(5))
