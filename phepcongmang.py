@@ -42,10 +42,12 @@ def cong_tren_F(A,B,F,W):
     t = math.ceil(math.ceil(math.log2(F))/W)
     a = thuattoancoban.so_sang_mang(F,W,A)
     b = thuattoancoban.so_sang_mang(F,W,B)
+    p = thuattoancoban.so_sang_mang(F,W,F)
 
     e,c = phep_cong_mang(a,b,t,W)
-    if e == 1 :
-        p=thuattoancoban.so_sang_mang(F,W,F)
+    if e==1:
+        e,c = phep_tru_mang(c,p,t,W)
+    elif e==0:
         e,c = phep_tru_mang(c,p,t,W)
     return c
 
