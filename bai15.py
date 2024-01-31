@@ -11,7 +11,7 @@ if __name__ == "__main__":
     while not P:
         P = input("Nhập lại giá trị chuỗi P: ")
     
-    
+
     k= kiemtrachuoi.boyer(P,T)
     if k == -1:
         print("Không mẫu P trong đoạn văn bản T")

@@ -1,3 +1,5 @@
+import math,random
+
 def eratosthenes(n):
     if n<0: 
         return []
@@ -12,3 +14,23 @@ def eratosthenes(n):
         p += 1
 
     return [i for i in range(n+1) if primes[i]]
+
+def era_phan_doan(n,m):
+    if n>m:
+        n,m=m,n
+    if n<2:
+        n=2
+
+    primes = [True] * (m-n+1)
+
+    i=2
+    while i**2 <= m:
+        if primes[i]:
+            for j in range(max(i * i, ((n + i - 1) // i) * i), m + 1, i):
+                primes[j-n] = False
+        i+=1
+    
+    return [i for i in range(n, m + 1) if primes[i - n]]
+
+
+

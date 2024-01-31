@@ -1,8 +1,8 @@
-import random
+import random,math
 
 def miller_rabin(n,t):
-    if t <= 0:
-        t = 10
+    if t <= math.sqrt(n):
+        t = math.ceil(math.sqrt(n))
     if n <= 1:
         return False
     if n == 2 or n == 3:
