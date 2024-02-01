@@ -11,7 +11,7 @@ def boyer(P,T):
                 i -= 1
                 j -= 1
         else:
-            i += m - min(j, 1 + last_oc(T[i+1],P))
+            i = i + m - min(j, 1 + last_oc(T[i+1],P))
             j = m - 1
     return -1
     
@@ -45,17 +45,20 @@ def kmp(P,T):
     return -1
 
 def failure(k,P):
+    #print("k=",k)
     if k <= 0:
         return -1
     
-    for i in range(k+1):
-        x=0
-        A = P[:i]  
-        for j in range(0,i):
-            if A[:j] == A[-j:] :
-                x += 1
+    A=P[:k]  
+    #print("tiền tố A=",A)
+    x=0
+    for i in range(k):
+        if A[:i] == A[-i:] :
+            x += 1
     return x
 
-#P= "abacab"
+P= "abacab"
 #T= "abacaabaccabacabaabb"
 #print(kmp(P,T))
+#for i in range(0,6):
+    #print(failure(i,P))
