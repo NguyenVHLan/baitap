@@ -12,7 +12,7 @@ if __name__ == "__main__":
     if a==1 or b==1:
         print(f"Ước chung lớn nhất gcd({a},{b})=1")
     elif a==b:
-        print(f"Ước chung lớn nhất gcd({a},{b})={a}")
+        print(f"Ước chung lớn nhất gcd({a},{b})=",a)
     else:
         if a<b:
             a,b=b,a

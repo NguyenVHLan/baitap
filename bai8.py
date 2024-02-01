@@ -20,5 +20,5 @@ if __name__ == "__main__":
 
     a = int(input("Nhập giá trị a: "))
 
-    print(f"Giá trị nghịch đảo của {a} trong trường F({p})là ", nghich_dao(a,p))
+    print(f"Giá trị nghịch đảo của {a} trong trường F({p}) là ", nghich_dao(a,p))
 

@@ -1,10 +1,5 @@
 import math
 
-# Ví dụ:
-#F = 2147483647
-#W = 8
-#a = 23456789
-
 # Thuật toán chuyển từ số sang mảng:
 def so_sang_mang(F, W, a):
     list = []
@@ -19,9 +14,6 @@ def so_sang_mang(F, W, a):
 
     return list
 
-#ket_qua = so_sang_mang(F, W, 765432)
-#print("Kết quả chuyển từ số sang mảng:", ket_qua)
-
 # Thuật toán chuyển từ mảng sang số:
 def mang_sang_so(F, W, A):
     m = math.ceil(math.log2(F))
@@ -33,6 +25,3 @@ def mang_sang_so(F, W, A):
         result += A[i]* x
 
     return result
-
-#ket_qua = mang_sang_so(F, W, ket_qua)
-#print("Kết quả chuyển từ mảng sang số:", ket_qua)

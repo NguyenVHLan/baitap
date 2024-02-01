@@ -1,8 +1,8 @@
 import random,math
 
+# hàm kiểm tra xem số n có phải là số nguyên tố hay không
 def miller_rabin(n,t):
-    if t <= math.sqrt(n):
-        t = math.ceil(math.sqrt(n))
+    # loại các điều kiện n
     if n <= 1:
         return False
     if n == 2 or n == 3:
@@ -10,6 +10,7 @@ def miller_rabin(n,t):
     if n % 2 == 0:
         return False
     
+    # n = 2^s * d + 1
     s=0
     x=n-1
     while x % 2 == 0:
@@ -17,6 +18,8 @@ def miller_rabin(n,t):
         s = s + 1
     r=x
 
+    # dùng định lý Miller-Rabin để kiểm tra số nguyên tố
+    # nếu a^d≡1(mod n) hoặc a^(2^r*d)≡ n−1 (mod n) thì n là số nguyên tố
     for _ in range(t):
         a = random.randint(2,n-2)
         y = modulo_power(a,r,n)
@@ -32,6 +35,7 @@ def miller_rabin(n,t):
     
     return True
 
+# hàm tính a^b mod m
 def modulo_power(a, b, m):
     if a % m == 0:
         return 0 
