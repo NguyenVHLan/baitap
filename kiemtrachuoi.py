@@ -57,7 +57,7 @@ def failure(k,P):
             x += 1
     return x
 
-P= "abacab"
+#P= "abacab"
 #T= "abacaabaccabacabaabb"
 #print(kmp(P,T))
 #for i in range(0,6):
